@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Web APIs Challenge: Code Quiz</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web APIs Challenge: Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
     <header>
-      <h1>Coding Quiz Challenge</h1>
-      <div class="timer">Time: <span id="time"></span></div>
-      <button class="view-scores">View Highscores</button>
+        <nav class="view-scores">
+            <a href="#">View high scores</a>
+            </nav>
+        <nav class="timer">Time: <span id="time"></span></nav>
     </header>
     <main>
-      <p>Try to answer the following code-related questions within the time limit.
-        Keep in mind that incorrect answers will penalize your score/time by ten seconds!
-      </p>
-      <div>
-        <button class="start-quiz">Start Quiz</button>
-      </div>
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.<br>
+            Keep in mind that incorrect answers will <span>penalize</span> your score/time<br> by ten seconds!
+        </p>
+        <div>
+            <button class="start-quiz">Start Quiz</button>
+        </div>
     </main>
     <script src="script.js"></script>
-  </body>
-  
+</body>
