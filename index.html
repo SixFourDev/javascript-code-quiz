@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head and Metadata -->
 <head>
     <title>Web APIs Challenge: Code Quiz</title>
     <meta charset="UTF-8">
@@ -8,22 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-
+<!-- Start of Body -->
 <body>
+    <!-- Header Section -->
     <header>
+        <!--View high scores and Timer -->
         <nav class="view-scores">
             <a href="#">View high scores</a>
             </nav>
         <nav class="timer">Time: <span id="time"></span></nav>
     </header>
+    <!-- Main Section including h1 and a small paragraph for what user will do -->
     <main>
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit.<br>
             Keep in mind that incorrect answers will <span>penalize</span> your score/time<br> by ten seconds!
         </p>
+        <!-- Start Quiz Button -->
         <div>
             <button class="start-quiz">Start Quiz</button>
         </div>
     </main>
+    <!-- Links js file -->
     <script src="script.js"></script>
 </body>
