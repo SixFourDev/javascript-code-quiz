@@ -7,4 +7,4 @@
 
 // game over when all questions answered or timer reaches 0
 
-// save my initials and score
+// player saves initials and score

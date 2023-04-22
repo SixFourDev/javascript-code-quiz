@@ -1,17 +1,14 @@
+/* This spaces out the View high scores and Timer */
 header {
     display: flex;
     justify-content: space-between;
 }
-
-.view-scores {
-    text-decoration: none;
-}
-
+/* Increases font size and bolds the Timer in upper right hand corner */
 .timer {
     font-size: 20px;
     font-weight: bold;
 }
-
+/* Displays main section in middle of the page, has them in a column and centered */
 main {
     display: flex;
     flex-direction: column;
@@ -19,21 +16,17 @@ main {
     align-items: center;
     height: 50vh;
 }
-
-main h1 {
-    display: flex;
-    justify-content: center;
-}
-
+/* Slightly increases size of font in paragraph element and aligns each
+line break to have them centered */
 p {
     font-size: 1.3rem;
     text-align: center;
 }
-
+/* This changes the color of "penalize" in main paragraph */
 p span {
     color: #f44336;
 }
-
+/* Button for Start Quiz */
 .start-quiz {
     display: block;
     background-color: rebeccapurple;
