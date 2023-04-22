@@ -20,7 +20,7 @@
         <nav class="timer">Time: <span id="time"></span></nav>
     </header>
     <!-- Main Section including h1 and a small paragraph for what user will do -->
-    <main>
+    <main id="main-page">
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit.<br>
             Keep in mind that incorrect answers will <span>penalize</span> your score/time<br> by ten seconds!
@@ -30,6 +30,17 @@
             <button class="start-quiz">Start Quiz</button>
         </div>
     </main>
+    <section id="question-container">
+        <aside id="question1" class="question">
+            <h2>Commonly used data types DO NOT include:</h2>
+            <ul class="choices">
+                <li><button>A. strings</button></li>
+                <li><button>B. booleans</button></li>
+                <li><button>C. alerts</button></li>
+                <li><button>D. numbers</button></li>
+            </ul>
+        </aside>
+    </section>
     <!-- Links js file -->
     <script src="script.js"></script>
 </body>
