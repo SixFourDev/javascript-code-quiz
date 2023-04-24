@@ -3,9 +3,12 @@ var startQuizButton = document.querySelector(".start-quiz");
 var mainPage = document.getElementById("main-page");
 var timerElement = document.getElementById("time");
 var questionContainer = document.querySelector("#question-container");
+var messageElement = document.querySelector(".message");
 var currentQuestion = 0;
 var score = 0;
 var timeLeft = 75;
+var timerInterval;
+
 
 var questions = [
   {
@@ -39,14 +42,14 @@ var questions = [
 function displayQuestion() {
   var questionElement = document.querySelector(".question");
   var choicesElement = document.querySelector(".choices");
+  var messageElement = document.querySelector(".message");
 
   // display the current question
   questionElement.textContent = questions[currentQuestion].question;
-  console.log(questions[currentQuestion].choices);
 
   // remove existing answer choices
-  choicesElement.textContent = "";
-  
+  choicesElement.innerHTML = "";
+
   // display the answer choices
   for (var i = 0; i < questions[currentQuestion].choices.length; i++) {
     var choice = questions[currentQuestion].choices[i];
@@ -59,21 +62,36 @@ function displayQuestion() {
     choiceElement.addEventListener("click", function (event) {
       if (event.target.textContent === questions[currentQuestion].answer) {
         // the user selected the correct answer
+        messageElement.textContent = "Correct!";
         score++;
       } else {
         // the user selected the wrong answer, subtract 10 seconds from the timer
+        messageElement.textContent = "Wrong!";
         timeLeft -= 10;
       }
-
+      
       // move on to the next question
       currentQuestion++;
+      
       if (currentQuestion < questions.length) {
         displayQuestion();
       } else {
         // the game is over, show the user's score
+        clearInterval(timerInterval);
         alert("Game over! Your score is " + score);
+
+        var initials = prompt("Enter your initials:");
+
+        // save initials and score to local storage
+        var highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
+        highScores.push({ initials: initials, score: score });
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+
+        // redirect to high scores page
+        window.location.href = "index.html";
       }
     });
+    
   }
 }
 
@@ -82,7 +100,7 @@ function startQuizGame() {
     timeLeft--;
     timerElement.textContent = timeLeft;
 
-    if (timeLeft <= 0) {
+    if (timeLeft === 0) {
       clearInterval(timerInterval);
       alert("Time's up! Your score is " + score);
     }
@@ -94,6 +112,3 @@ function startQuizGame() {
 }
 
 startQuizButton.addEventListener("click", startQuizGame);
-
-// player saves initials and score
-
