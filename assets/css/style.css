@@ -37,3 +37,31 @@ p span {
     transition: background-color 0.2s ease;
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#question-container {
+    margin-top: -275px;
+}
+
+.choices button {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-left: 350px;
+    padding: 10px;
+    width: 25%;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+.choices button:hover {
+    background-color: pink;
+  }
+  
