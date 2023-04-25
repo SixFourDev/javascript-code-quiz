@@ -78,7 +78,7 @@ function displayQuestion() {
       } else {
         // the game is over, show the user's score
         clearInterval(timerInterval);
-        alert("Game over! Your score is " + score);
+        alert("All done! Your score is " + score);
 
         var initials = prompt("Enter your initials:");
 
