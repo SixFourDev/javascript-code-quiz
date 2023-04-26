@@ -4,6 +4,7 @@ var mainPage = document.getElementById("main-page");
 var timerElement = document.getElementById("time");
 var questionContainer = document.querySelector("#question-container");
 var messageElement = document.querySelector(".message");
+var highScoreForm = document.querySelectorAll("#high-score-form")
 var currentQuestion = 0;
 var score = 0;
 var timeLeft = 75;
