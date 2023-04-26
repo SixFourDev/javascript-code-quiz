@@ -17,7 +17,7 @@ This webpage was created to quiz bootcamp students on some questions pertaining 
 <img width="1016" alt="Screen Shot 2023-04-26 at 9 57 17 AM" src="https://user-images.githubusercontent.com/127274865/234711858-242eefc8-b4fe-49d2-91e5-f0716a20fdae.png">
 
 
-https://sixfourdev.github.io/password-generator
+https://sixfourdev.github.io/javascript-code-quiz/
 
 ## Credits
 
