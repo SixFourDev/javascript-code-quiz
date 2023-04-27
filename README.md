@@ -16,6 +16,8 @@ This webpage was created to quiz bootcamp students on some questions pertaining 
 
 <img width="1016" alt="Screen Shot 2023-04-26 at 9 57 17 AM" src="https://user-images.githubusercontent.com/127274865/234711858-242eefc8-b4fe-49d2-91e5-f0716a20fdae.png">
 
+<img width="784" alt="Screen Shot 2023-04-27 at 9 23 39 AM" src="https://user-images.githubusercontent.com/127274865/234927688-2494015d-1055-4b34-a6d9-3e713536923e.png">
+
 
 https://sixfourdev.github.io/javascript-code-quiz/
 
