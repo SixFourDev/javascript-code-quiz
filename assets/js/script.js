@@ -10,7 +10,7 @@ var score = 0;
 var timeLeft = 75;
 var timerInterval;
 
-
+// Questions array with 5 objects that represent each questions with choices and answer
 var questions = [
   {
     question: "Commonly used data types DO NOT include :",
@@ -95,21 +95,24 @@ function displayQuestion() {
     
   }
 }
-
+// Creates a function that starts the quiz
 function startQuizGame() {
+  // Sets up a timer 
   var timerInterval = setInterval(function () {
+    // Decrements the time left by 1 second
     timeLeft--;
+    // Update the timer display on the page
     timerElement.textContent = timeLeft;
-
+    // If the time left is equal to 0 clear the timer interval and show alert
     if (timeLeft === 0) {
       clearInterval(timerInterval);
       alert("Time's up! Your score is " + score);
     }
   }, 1000);
-
+  // Clear the contents of mainPage
   mainPage.textContent = "";
-
+  // Calls the function displayQuestion to display first question
   displayQuestion();
 }
-
+// Adds event listener to start quiz button which calls startQuizGame
 startQuizButton.addEventListener("click", startQuizGame);
