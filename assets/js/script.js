@@ -51,12 +51,16 @@ function displayQuestion() {
   // remove existing answer choices
   choicesElement.innerHTML = "";
 
-  // display the answer choices
+  // loops through each choice in the current question's choices array
   for (var i = 0; i < questions[currentQuestion].choices.length; i++) {
+    // gets the current choice
     var choice = questions[currentQuestion].choices[i];
+    // create a new button element for the choice
     var choiceElement = document.createElement("button");
     var choiceText = document.createTextNode(choice);
+    // appends choiceText to the choice Element
     choiceElement.appendChild(choiceText);
+    // appends choiceElement to choicesElement
     choicesElement.appendChild(choiceElement);
 
     // add an event listener to check if the user selected the correct answer
